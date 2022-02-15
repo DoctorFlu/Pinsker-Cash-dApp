@@ -69,9 +69,8 @@ contract TokenExchange is Ownable {
     }
 
     // Given an amount of tokens, calculates the corresponding amount of ETH 
-    // based on the current exchange rate of the pool.
-    //
-    // NOTE: You can change the inputs, or the scope of your function, as needed.
+    // based on the current exchange rate of the pool
+    
     function amountTokenGivenETH(uint amountToken) 
         public 
         view
@@ -85,15 +84,14 @@ contract TokenExchange is Ownable {
 
     // Given an amount of ETH, calculates the corresponding amount of tokens 
     // based on the current exchange rate of the pool.
-    //
-    // NOTE: You can change the inputs, or the scope of your function, as needed.
+
     function amountETHGivenToken(uint amountETH)
         public
         view
         returns (uint)
     {
         /******* TODO: Implement this function *******/
-        /* HINTS:
+        /*
             Calculate how much of your token is of equivalent worth based on the current exchange rate.
         */
     }
@@ -105,15 +103,13 @@ contract TokenExchange is Ownable {
      * caller possesses insufficient tokens to equal the ETH sent, then the transaction must
      * fail. A successful transaction should update the state of the contract, including the
      * new constant product k, and then Emit an AddLiquidity event.
-     *
-     * NOTE: You can change the inputs, or the scope of your function, as needed.
      */
     function addLiquidity() 
         external 
         payable
     {
         /******* TODO: Implement this function *******/
-        /* HINTS:
+        /*
             Calculate the liquidity to be added based on what was sent in and the prices.
             If the caller possesses insufficient tokens to equal the ETH sent, then transaction must fail.
             Update token_reserves, eth_reserves, and k.
@@ -129,15 +125,13 @@ contract TokenExchange is Ownable {
      * entitled to remove the desired amount of liquidity, the transaction should fail. A
      * successful transaction should update the state of the contract, including the new constant
      * product k, transfer the ETH and Token to the sender and then Emit an RemoveLiquidity event.
-     *
-     * NOTE: You can change the inputs, or the scope of your function, as needed.
      */
     function removeLiquidity(uint amountETH)
         public 
         payable
     {
         /******* TODO: Implement this function *******/
-        /* HINTS:
+        /*
             Calculate the amount of your tokens that should be also removed.
             Transfer the ETH and Token to the provider.
             Update token_reserves, eth_reserves, and k.
@@ -150,15 +144,13 @@ contract TokenExchange is Ownable {
      *
      * Calculate the maximum amount of liquidity that the sender is entitled to withdraw and then
      * calls removeLiquidity() to remove that amount of liquidity from the pool.
-     *
-     * NOTE: You can change the inputs, or the scope of your function, as needed.
      */
     function removeAllLiquidity()
         external
         payable
     {
         /******* TODO: Implement this function *******/
-        /* HINTS:
+        /*
             Decide on the maximum allowable ETH that msg.sender can remove.
             Call removeLiquidity().
         */
@@ -273,6 +265,4 @@ contract TokenExchange is Ownable {
         assert(check < (token_reserves + eth_reserves + 1));
         k = token_reserves * eth_reserves;             // reset k due to small rounding errors
     }
-
-// helper functions
 }
