@@ -1,0 +1,111 @@
+/* style.css
+	Defines the style of index.js
+// =============================================================================
+//                    YOU DO NOT NEED TO EDIT THIS FILE
+// =============================================================================
+// if you want to have cooler battleship pictures, change boat.png in media/
+*/
+
+body {
+ 	font-family: 'helvetica';
+	background-color:#ffffff;
+	background-image: url("file:///Users/ryanpinsker/Desktop/memed-io-output.jpeg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size:cover;
+	padding: 30px;
+	text-align: center;
+}
+img {
+	object-fit: fill;
+}
+
+
+#title{
+	color: #ededeb;
+	text-align: center;
+}
+#subtitle{
+	color: #ededeb;
+	text-align: center;
+}
+#rate-display{
+	color: #ededeb;
+	text-align: center;
+
+}
+.main {
+	width: 50%;
+	text-align: center;
+}
+#liquidity-control{
+	color: #ededeb;
+	text-align: center;
+}
+#current-liquidity-title{
+	color: #ededeb;
+	text-align: center;
+}
+#swap-control{
+	color: #ededeb;
+	text-align: center;
+}
+.panel {
+	position: absolute;
+	top: 20px;
+	width: 300px;
+	background-color: #ec3636;
+	padding: 20px;
+	text-align: center;
+}
+.panel_left {
+	left: 20px;
+	text-align: center;
+}
+.panel_right {
+	right: 20px;
+	text-align: center;
+}
+#all_users {
+	color: #ededeb;
+	text-align: center;
+}
+.wallet_addresses_panel {
+	position: absolute;
+	width: 300px;
+	height: 160px;
+	background-color: #ededeb;
+	padding: 20px;
+	bottom: 10px;
+	right: 10px;
+	font-size: 10px;
+	opacity: 0.5;
+	text-align: center;
+}
+#amount {
+	width: 140px;
+	text-align: center;
+}
+
+label {
+	display:block;
+	margin-bottom:10px;
+	text-align: center;
+	font-family: 'Fantasy', 'helvetica';
+}
+input {
+	width: 280px;
+	padding: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+	font-family: 'Fantasy', 'helvetica';
+}
+button {
+	display: ruby;
+	margin: 30px 0;
+	padding: 15px 30px;
+	border: 1px solid #ededeb;
+	background: #ededeb;
+	text-align: center;
+	font-family: 'Fantasy', 'helvetica';
+}
